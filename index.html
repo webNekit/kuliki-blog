@@ -6,8 +6,85 @@
     <title>Document</title>
     <meta name="title" content="Название сайта">
     <meta name="description" content="Описание сайта">
+    <link rel="stylesheet" href="css/reset.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
 </head>
-<body>
-    
+<body class="app" data-app>
+    <div class="page-wrapper" data-page-wrapper>
+        <!-- start header -->
+        <header class="header" id="header" data-header>
+            <div class="container header-container">
+                <!-- start logo -->
+                <div class="header-logo logo">
+                    <a title="На главную" href="#!" class="logo-link">
+                        <img src="" alt="Логотип сайта" width="130" height="40" class="logo-icon">
+                    </a>
+                </div>
+                <!-- end logo -->
+                <!-- start navbar -->
+                <nav class="header-navbar navbar" data-navbar>
+                    <menu class="navbar-menu">
+                        <li class="navbar-menuItem">
+                            <a href="#!" title="Главная" class="navbar-menuLink hover:underline" data-nav-link>Главная</a>
+                        </li>
+                        <li class="navbar-menuItem">
+                            <a href="#!" title="О проекте" class="navbar-menuLink hover:underline" data-nav-link>О проекте</a>
+                        </li>
+                        <li class="navbar-menuItem">
+                            <a href="#!" title="Новости" class="navbar-menuLink hover:underline" data-nav-link>Новости</a>
+                        </li>
+                        <li class="navbar-menuItem">
+                            <a href="#!" title="Объявления" class="navbar-menuLink hover:underline" data-nav-link>Объявления</a>
+                        </li>
+                        <li class="navbar-menuItem">
+                            <a href="#!" title="Земляки" class="navbar-menuLink hover:underline" data-nav-link>Земляки</a>
+                        </li>
+                    </menu>
+                </nav>
+                <!-- end navbar -->
+                <!-- start header-tools -->
+                 <div class="header-tools">
+                    <ul class="header-toolsList">
+                        <li class="header-toolsItem">
+                            <button class="header-toolsControl search-btn" aria-label="Search" data-search-toggler>
+                                <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+                                <span class="head-toolsControl-span search-btnSpan">Поиск</span>
+                            </button>
+                        </li>
+                        <li class="header-toolsItem">
+                            <button class="header-toolsControll menu-toggle" aria-label="toggle menu" data-menu-toggler>
+                                <span class="menu-toggleLine"></span>
+                                <span class="menu-toggleLine"></span>
+                                <span class="menu-toggleLine"></span>
+                            </button>
+                        </li>
+                        <li class="header-toolsItem">
+                            <a href="#!" title="Войти" class="header-toolsControl login-link">Войти</a>
+                        </li>
+                    </ul>
+                 </div>
+                <!-- end header-tools -->
+            </div>
+        </header>
+        <!-- end header -->
+        <!-- start main -->
+        <main class="main" id="main" data-main>
+            <!-- content website -->
+        </main>
+        <!-- end main -->
+        <!-- start footer -->
+        <footer class="footer" id="footer" data-footer>
+            <div class="container footer-container">
+
+            </div>
+        </footer>
+        <!-- end footer -->
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
