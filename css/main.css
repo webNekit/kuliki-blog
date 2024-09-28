@@ -54,6 +54,13 @@
     --spacing-md: 1rem;
     --spacing-lg: 1.5rem;
     --spacing-xl: 2rem;
+
+    --section-offset: 50px;
+
+    --transition-1: 100ms;
+    --transition-2: 200ms;
+    --transition-3: 300ms;
+    --transition-4: 400ms;
 }
 
 :focus-visible {
@@ -97,9 +104,100 @@ body {
     margin-inline: auto;
 }
 
+/* effects */
+.hover\:underline {
+    text-underline-offset: 0.1875rem;
+}
+
+.hover\:underline:is(:hover, :focus) {
+    text-decoration: underline;
+}
+
 /* header */
-.header .navbar, 
 .header .search-btn .search-btnSpan,
 .header .login-link {
     display: none;
+}
+
+.header {
+    position: relative;
+    padding-block: 1.5rem;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-toolsList {
+    display: flex;
+    gap: 0.9375rem;
+}
+
+.header .search-btn {
+    font-size: 1.75rem;
+}
+
+.header .search-btn ion-icon {
+    --ionicon-stroke-width: 3.125rem;
+}
+
+.header .menu-toggleLine {
+    display: block;
+    width: 1.875rem;
+    height: 0.1875rem;
+    background-color: var(--foreground);
+    transition: all var(--transition-2);
+}
+
+.header .menu-toggleLine:not(:last-child) {
+    margin-block-end: 0.4375rem;
+}
+
+.header .menu-toggle.active .menu-toggleLine:nth-child(2) {
+    opacity: 0;
+}
+
+.header .menu-toggle.active .menu-toggleLine:nth-child(1) {
+    transform: translateY(0.625rem) rotate(45deg);
+}
+
+.header .menu-toggle.active .menu-toggleLine:nth-child(3) {
+    transform: translateY(-0.625rem) rotate(-45deg);
+}
+
+.header .navbar {
+    position: absolute;
+    top: calc(100% - 1.25rem);
+    right: var(--container-padding);
+    min-width: 6.25rem;
+    padding: 0.9375rem 0.625rem;
+    color: var(--background);
+    border-radius: var(--radius-lg);
+    transform: translateY(0.625rem);
+    opacity: 0;
+    visibility: hidden;
+    background-color: var(--foreground);
+    transition: all var(--transition-2);
+    z-index: 2;
+}
+
+.header .navbar.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.header .navbar .navbar-menuItem {
+    width: 100%;
+}
+
+.header .navbar .navbar-menuLink {
+    display: inline-block;
+    width: 100%;
+    padding: 5px;
+    text-align: right;
+    font-weight: 500;
+    font-size: 1.125rem;
 }
